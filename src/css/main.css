@@ -2,8 +2,10 @@
 
 body {
 	background-color: var(--bg);
+	/* background-image: linear-gradient(-45deg, var(--green), var(--pink)); */
 	color: var(--fg);
 	align-items: center;
+	font-family: sans-serif;
 	/* padding: 0; */
 }
 
@@ -12,41 +14,90 @@ body {
 	height: 20vh;
 }
 
-/* * {
-	font-family: "Share Tech", sans-serif;
-} */
 
-input[type="search"] {
-	background-color: var(--surface0);
+#search-box {
+	background-color: var(--bg-2);
 	outline: none;
 	color: var(--fg);
-	border-width: 0px;
-	border-color: var(--surface0);
+	border: none;
 	border-radius: 20px;
 	font-size: large;
-	padding: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	width: 70%;
+	width: 50vw;
 	height: 50px;
 }
 
-h1 {
-	font-size: 35pt;
+#search-box::placeholder {
+	color: var(--fg-1);
+}
+
+h1#time {
+	font-size: 30pt;
+	text-align: center;
 }
 
 #widgets {
-	background: var(--mantle);
-	padding: 20px;
-	height: 60vh;
+	padding: auto;
+	padding-top: 20px;
 	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	/* margin-bottom: 10px; */
-	border-radius: 20px;
 	text-align: left;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 190px);
+	grid-template-rows: 100px;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
 }
 
-a {
+div#widgets div.widget {
+	background-color: var(--bg-1);
+	text-align: center;
+	padding: 10px;
+	border-radius: 20px;
+
+	span {
+		text-transform: capitalize;
+	}
+
+	a {
+		transition: font-weight 50ms ease-in-out;
+	}
+}
+
+div#widgets div.widget a:hover {
+	font-weight: 700;
+}
+
+/* ------------------------------- */
+
+.animation-translate {
+	transition: transform 0.2s ease-in-out;
+}
+
+.animation-translate:hover {
+	transform: translate(0, -5px);
+}
+
+/* ------------------------------- */
+
+.container .widget a {
 	color: var(--fg);
+	text-decoration: none;
+	text-transform: capitalize;
+	display: block;
+	position: relative;
+	padding: 5px;
+	width: fit-content;
+	margin: auto;
+}
+
+
+#settings-icon {
+	fill: var(--fg);
+	margin-left: auto;
+	margin-right: 10px;
+	position: fixed;
+	bottom: 10px;
+	right: 4px;
 }

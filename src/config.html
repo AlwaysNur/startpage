@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starpage Config</title>
+    <link rel="stylesheet" href="" id="theme" />
+    <script src="js/config.js"></script>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/config.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Theme</h2>
+        <select name="theme" id="theme-picker" oninput="changeTheme()">
+            <option value="1">Catppuccin Mocha</option>
+            <option value="2">Catppuccin Macchiato</option>
+            <option value="3">Catppuccin Frappe</option>
+            <option value="4">Catppuccin Latte</option>
+            <option value="5">Nord Dark</option>
+            <option value="6">Nord Light</option>
+        </select>
+        <h2>Search Engine</h2>
+        <select name="search-engine-picker" id="search-engine-picker" oninput="changeSearchEngine()">
+            <option value="1">DuckDuckGo</option>
+            <option value="2">Google Search</option>
+            <option value="3">Bing</option>
+            <option value="4">Search Encrypt</option>
+        </select>
+    </div>
+</body>
+
+</html>
