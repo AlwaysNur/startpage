@@ -1,0 +1,55 @@
+name: Screenshot startpage and push to main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  take_screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Print Node version
+        run: npm -v
+
+      - name: Install dependencies
+        run: |
+          npm init -y
+          npm install puppeteer
+
+      - name: Take screenshot
+        run: |
+          node -e "
+            const puppeteer = require('puppeteer');
+            (async () => {
+              const browser = await puppeteer.launch({
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
+              });
+              const page = await browser.newPage();
+              await page.goto('file://' + process.cwd() + '/src/index.html');
+              await page.screenshot({ path: 'assets/screenshot.png' });
+              await browser.close();
+            })();
+          "
+
+      - name: Commit screenshot to repository
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add assets
+          git commit -m 'Add screenshot of HTML'
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write
