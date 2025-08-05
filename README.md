@@ -1,3 +1,3 @@
 # 🌿 Startpage
 
-![screenshot of startpage](./assets/screenshot.png)
+<img src="./assets/screenshot.png" height="450"/>
