@@ -231,13 +231,14 @@ Styleguide Nord
 }
 
 :root {
-    --bg: var(--nord0);
-    --fg: var(--nord6);
-    --fg-1: var(--nord4);
-    --bg-1: var(--nord1);
-    --bg-2: var(--nord3);
+    --bg: var(--nord6);
+    --fg: var(--nord0);
+    --fg-1: var(--nord3);
+    --bg-1: var(--nord4);
+    --bg-2: var(--nord4);
     --blue: var(--nord10);
     --green: var(--nord14);
     --yellow: var(--nord13);
     --pink: var(--nord15);
+    --red: var(--nord11);
 }
