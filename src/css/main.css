@@ -2,16 +2,14 @@
 
 body {
 	background-color: var(--bg);
-	/* background-image: linear-gradient(-45deg, var(--green), var(--pink)); */
 	color: var(--fg);
-	align-items: center;
+	align-content: center;
 	font-family: sans-serif;
-	/* padding: 0; */
 }
 
 .container {
 	text-align: center;
-	height: 20vh;
+	height: 100vh;
 }
 
 
@@ -38,12 +36,11 @@ h1#time {
 }
 
 #widgets {
-	padding: auto;
-	padding-top: 20px;
-	width: 90%;
+	padding-top: 30px;
+	width: 100%;
 	text-align: left;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 190px);
+	grid-template-columns: repeat(auto-fit, 180px);
 	grid-template-rows: 100px;
 	gap: 30px;
 	align-items: center;
@@ -54,7 +51,7 @@ div#widgets div.widget {
 	background-color: var(--bg-1);
 	text-align: center;
 	padding: 10px;
-	border-radius: 20px;
+	border-radius: 10px;
 
 	span {
 		text-transform: capitalize;
@@ -66,7 +63,7 @@ div#widgets div.widget {
 }
 
 div#widgets div.widget a:hover {
-	font-weight: 700;
+	font-weight: 520;
 }
 
 /* ------------------------------- */
@@ -77,6 +74,14 @@ div#widgets div.widget a:hover {
 
 .animation-translate:hover {
 	transform: translate(0, -5px);
+}
+
+.animation-rotate {
+	transition: transform 0.2s ease-in-out;
+}
+
+.animation-rotate:hover {
+	transform: rotate(0.4turn);
 }
 
 /* ------------------------------- */
