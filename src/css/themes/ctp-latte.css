@@ -83,6 +83,6 @@
     --fg: var(--text);
     --fg-1: var(--subtext0);
     --bg: var(--base);
-    --bg-1: var(--mantle);
+    --bg-1: var(--crust);
     --bg-2: var(--surface0);
 }
