@@ -30,10 +30,10 @@ body {
 
 #search-box::placeholder {
 	color: var(--fg-1);
+	font-size: 13pt;
 }
 
 h1#time {
-	font-size: 30pt;
 	text-align: center;
 }
 
@@ -112,4 +112,9 @@ div#widgets div.widget a:hover {
 
 body {
 	overflow: hidden;
+	font-size: 12pt;
+}
+
+h1 {
+	font-size: 31pt;
 }
