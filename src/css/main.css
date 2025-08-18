@@ -113,6 +113,8 @@ div#widgets div.widget a:hover {
 body {
 	overflow: hidden;
 	font-size: 12pt;
+	opacity: 0;
+	transition: opacity 1.5s;
 }
 
 h1 {
