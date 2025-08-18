@@ -31,10 +31,14 @@ var searchEngine = parseInt(localStorage.getItem("se")) - 1;
 var searchEngineName = searchEngines[searchEngine][1];
 
 document.addEventListener("DOMContentLoaded", function () {
-
+	var searchBox = document.getElementById("search-box")
 	document.getElementById("time").innerHTML = getTime()
-	document.getElementById("search-box").placeholder = `Search with ${searchEngineName}...`;
+	searchBox.placeholder = `Search with ${searchEngineName}...`;
 	document.getElementById("search").action = searchEngines[searchEngine][0];
+});
+
+document.getElementById("search").addEventListener("submit", function () {
+	location.href = document.getElementById("search").action + searchBox.ariaValueMax;
 });
 
 setInterval(function () { document.getElementById("time").innerHTML = getTime() }, 30000);
