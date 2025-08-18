@@ -1,3 +1,10 @@
+if (localStorage.getItem("theme") === null | localStorage.getItem("theme") === undefined) {
+	localStorage.setItem("theme", "1")
+}
+if (localStorage.getItem("se") === null | localStorage.getItem("se") === undefined) {
+	localStorage.setItem("se", "1")
+}
+
 function formatTime(number) {
 	return number < 10 ? '0' + number : number;
 }
