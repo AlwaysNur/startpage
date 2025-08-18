@@ -25,6 +25,7 @@ body {
 	padding-right: 20px;
 	width: 50vw;
 	height: 50px;
+	min-width: 350px;
 }
 
 #search-box::placeholder {
@@ -58,14 +59,9 @@ div#widgets div.widget {
 		text-transform: capitalize;
 	}
 
-	a {
-		transition: font-weight 50ms ease-in-out;
-	}
+
 }
 
-div#widgets div.widget a:hover {
-	font-weight: 520;
-}
 
 /* ------------------------------- */
 
@@ -91,11 +87,17 @@ div#widgets div.widget a:hover {
 	color: var(--fg);
 	text-decoration: none;
 	text-transform: capitalize;
-	display: block;
+	display: flex;
+	align-items: center;
 	position: relative;
 	padding: 5px;
 	width: fit-content;
-	margin: auto;
+	margin: auto auto;
+	transition: font-weight 50ms ease-in-out;
+}
+
+div#widgets div.widget a:hover {
+	font-weight: 520;
 }
 
 
@@ -106,4 +108,8 @@ div#widgets div.widget a:hover {
 	position: fixed;
 	bottom: 10px;
 	right: 4px;
+}
+
+body {
+	overflow: hidden;
 }
