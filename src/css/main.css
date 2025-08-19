@@ -30,7 +30,7 @@ body {
 
 #search-box::placeholder {
 	color: var(--fg-1);
-	font-size: 13pt;
+	font-size: 12pt;
 }
 
 h1#time {
@@ -114,7 +114,7 @@ body {
 	overflow: hidden;
 	font-size: 12pt;
 	opacity: 0;
-	transition: opacity 1.5s;
+	transition: opacity 1s;
 }
 
 h1 {

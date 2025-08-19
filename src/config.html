@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starpage Config</title>
     <link rel="stylesheet" href="" id="theme" />
-    <script src="js/config.js"></script>
+    <script src="js/config.js" defer></script>
     <script src="js/theme.js"></script>
+    <script src="js/font.js" defer></script>
     <link rel="stylesheet" href="css/config.css">
+    <link href="" rel="stylesheet" id="font">
+    <style id="font-set">
+    </style>
 </head>
 
 <body>
@@ -23,6 +27,8 @@
             <option value="6">Nord Light</option>
             <option value="5">Nord Dark</option>
         </select><br>
+        <h3>Font</h3>
+        <input type="text" placeholder="Type font name..." id="font-picker">
         <h2>Search Engine</h2>
         <select name="search-engine-picker" id="search-engine-picker" oninput="changeSearchEngine()">
             <option value="1">DuckDuckGo</option>
