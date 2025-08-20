@@ -35,6 +35,3 @@ document.getElementById("font-picker").addEventListener("keyup", function (event
         changeFont();
     }
 });
-document.getElementById("tab-name-picker").addEventListener("keydown", function (event) {
-    changeTabName();
-});
