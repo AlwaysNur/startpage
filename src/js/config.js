@@ -36,7 +36,5 @@ document.getElementById("font-picker").addEventListener("keyup", function (event
     }
 });
 document.getElementById("tab-name-picker").addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        changeTabName();
-    }
+    changeTabName();
 });
