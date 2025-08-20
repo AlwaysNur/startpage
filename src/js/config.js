@@ -1,3 +1,13 @@
+if (localStorage.getItem("theme") === null | localStorage.getItem("theme") === undefined) {
+    localStorage.setItem("theme", "1")
+}
+if (localStorage.getItem("se") === null | localStorage.getItem("se") === undefined) {
+    localStorage.setItem("se", "1")
+}
+if (localStorage.getItem("tab-name") === null | localStorage.getItem("tab-name") === undefined) {
+    localStorage.setItem("tab-name", "Startpage")
+}
+
 function changeTheme() {
     localStorage.setItem("theme", document.getElementById("theme-picker").value);
     location.reload();
@@ -12,10 +22,16 @@ function changeFont() {
 
 document.getElementById("theme-picker").value = localStorage.getItem("theme");
 document.getElementById("search-engine-picker").value = localStorage.getItem("se");
-document.getElementById("font-picker").value = localStorage.getItem("font")
+document.getElementById("font-picker").value = localStorage.getItem("font");
+
 document.getElementById("font-picker").addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.key === "Enter") {
         changeFont();
+    }
+});
+document.getElementById("tab-name-picker").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        changeFontSize();
     }
 });

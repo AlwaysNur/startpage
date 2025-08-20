@@ -21,4 +21,5 @@ var themeName = themes[theme - 1][0];
 
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("theme").href = themes[theme - 1][1];
+    document.getElementsByTagName("title")[0].innerHTML = localStorage.getItem("tab-name");
 });
