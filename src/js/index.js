@@ -29,16 +29,10 @@ let searchEngines = [
 
 var searchEngine = parseInt(localStorage.getItem("se")) - 1;
 var searchEngineName = searchEngines[searchEngine][1];
+var searchBox = document.getElementById("search-box");
 
-document.addEventListener("DOMContentLoaded", function () {
-	var searchBox = document.getElementById("search-box")
-	document.getElementById("time").innerHTML = getTime()
-	searchBox.placeholder = `Search with ${searchEngineName}...`;
-	document.getElementById("search").action = searchEngines[searchEngine][0];
-});
-
-document.getElementById("search").addEventListener("submit", function () {
-	location.href = document.getElementById("search").action + searchBox.ariaValueMax;
-});
+document.getElementById("time").innerHTML = getTime();
+searchBox.placeholder = `Search with ${searchEngineName}...`;
+document.getElementById("search").action = searchEngines[searchEngine][0];
 
 setInterval(function () { document.getElementById("time").innerHTML = getTime() }, 30000);
